@@ -4,6 +4,10 @@
 #define $SHORT(A,B) [Shortcut.alloc initWithURI:A syntax:B]
 
 @implementation AppDelegate
+
+//	essential for list view to work.
+- (AssetCollection*) assets	{ return _assets = AssetCollection.sharedInstance; 	}
+
 - (void)setupRoutes
 {
 	[@[ @[ @"/hello",					@"/hello" ],
@@ -26,6 +30,8 @@
 			[res respondWithString:theResponse];
 		}];
 	}];
+
+
 
 	[_http post:@"/widgets" withBlock:^(REQ *req, RES *res) {	// Create a new widget, [request body] contains the POST body data. For this example we're just going to echo it back.
 		NSLog(@"POST: %@", req.body);
@@ -76,7 +82,14 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification;
 {
-	[self loadURL:$(@"%@%@",_baseURL, ((Shortcut*)_queriesController.arrangedObjects[_shortcuts.selectedRow]).uri)];
+	AZLOG(notification.object);
+	if (notification.object == _shortcuts)
+		[self loadURL:$(@"%@%@",_baseURL, ((Shortcut*)_queriesController.arrangedObjects[_shortcuts.selectedRow]).uri)];
+	else {
+		NSS *pre = $(@"<pre>%@</pre>", [((Asset*)_assetController.arrangedObjects[_assetTable.selectedRow]).markup encodeHTMLCharacterEntities]);
+
+		[_webView.mainFrame loadHTMLString:[pre wrapInHTML]  baseURL:$URL(_baseURL)];
+	}
 }
 
 - (void)contactSheetWith:(NSA*)images rect:(NSR)rect cols:(NSUI)cols callback:(void (^)(NSImage *))callback  {
@@ -132,17 +145,17 @@
 	return _http;
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+- (void)awakeFromNib {
+	[_assetTable registerForDraggedTypes:@[AssetDataType]];
 	_queries = NSMA.new;
 	_urlField.delegate = self;
 	self.http.documentRoot = [NSB.mainBundle.resourcePath withPath:@"twitter_bootstrap_admin"];	//	[@"~/Sites" stringByExpandingTildeInPath]];
-
-	[@[ @[_cssPathBar, @"css"], @[_htmlPathBar, @"html"], @[_jsPathBar, @"js"]] each:^(id obj) {
-		NSS* path = [[obj[0] URL]path];
+//	_assets = [AssetCollection sharedInstance];
+	[@[ @[_cssPathBar, @"style"], @[_htmlPathBar, @"div"], @[_jsPathBar, @"javascript"]] each:^(id obj) {
+		NSS* path = [[obj[0] URL] path] ;
 		AssetType type = [(NSString*)obj[1] assetFromString];
 		NSLog(@"adding type: %@ from path: %@", assetStringValue[type], path);
-		[_assets addFolder:path matchingType:type];
+		[self.assets addFolder:path matchingType:type];
 	}];
 
 }
@@ -152,6 +165,56 @@
 - (void)loadURL:(NSS*)string	{	[_webView.mainFrame loadRequest: [NSURLREQ requestWithURL:$URL(string ?: $(@"http://localhost:%i", _http.port))]];	}
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame	{	_urlField.stringValue = sender.mainFrameURL;	}
+
+
+// drag operation stuff
+- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard
+{
+    // Copy the row numbers to the pasteboard.
+    NSData *zNSIndexSetData = [NSKeyedArchiver archivedDataWithRootObject:rowIndexes];
+    [pboard declareTypes:[NSArray arrayWithObject:AssetDataType] owner:self];
+    [pboard setData:zNSIndexSetData forType:AssetDataType];
+    return YES;
+}
+
+- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op
+{
+    // Add code here to validate the drop
+    //NSLog(@"validate Drop");
+    return NSDragOperationEvery;
+}
+
+- (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id <NSDraggingInfo>)info
+			  row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation
+{
+    NSPasteboard* pboard = [info draggingPasteboard];
+    NSData* rowData = [pboard dataForType:AssetDataType];
+    NSIndexSet* rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:rowData];
+    NSInteger dragRow = [rowIndexes firstIndex];
+
+    // Move the specified row to its new location...
+	// if we remove a row then everything moves down by one
+	// so do an insert prior to the delete
+	// --- depends which way we're moving the data!!!
+	if (dragRow < row) {
+		[_assets insertObject:[_assets.assets objectAtIndex:dragRow] inAssetsAtIndex:row];
+		[_assets removeObjectFromAssetsAtIndex:dragRow];
+//		[_assetTable noteNumberOfRowsChanged];
+//		[self.nsTableViewObj reloadData];
+
+		return YES;
+
+	} // end if
+
+//	MyData * zData = [nsAryOfDataValues objectAtIndex:dragRow];
+//	[nsAryOfDataValues removeObjectAtIndex:dragRow];
+//	[nsAryOfDataValues insertObject:zData atIndex:row];
+//	[self.nsTableViewObj noteNumberOfRowsChanged];
+//	[self.nsTableViewObj reloadData];
+
+	return YES;
+}
+
 
 @end
 
