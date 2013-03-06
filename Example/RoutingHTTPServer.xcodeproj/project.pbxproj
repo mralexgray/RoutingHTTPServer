@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B8A347416E6ED070088D209 /* AssetCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A347316E6ED070088D209 /* AssetCollection.m */; };
+		7BB3EF041674F81100BABF35 /* twitter_bootstrap_admin in Resources */ = {isa = PBXBuildFile; fileRef = 7BB3EF031674F81100BABF35 /* twitter_bootstrap_admin */; };
 		C99CEC8A147959C200F648A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99CEC89147959C200F648A5 /* Cocoa.framework */; };
 		C99CEC94147959C200F648A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C99CEC92147959C200F648A5 /* InfoPlist.strings */; };
 		C99CEC96147959C200F648A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C99CEC95147959C200F648A5 /* main.m */; };
@@ -37,7 +39,6 @@
 		C99CECFD14795B6C00F648A5 /* HTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C99CECF714795B6C00F648A5 /* HTTPFileResponse.m */; };
 		C99CECFE14795B6C00F648A5 /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C99CECF914795B6C00F648A5 /* HTTPRedirectResponse.m */; };
 		C99CED0114795B7800F648A5 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C99CED0014795B7800F648A5 /* GCDAsyncSocket.m */; };
-		C99CED0414795B8000F648A5 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C99CED0314795B8000F648A5 /* DDLog.m */; };
 		C99CED0914795C2700F648A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99CED0814795C2700F648A5 /* Security.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B8A347216E6ED070088D209 /* AssetCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetCollection.h; sourceTree = "<group>"; };
+		7B8A347316E6ED070088D209 /* AssetCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetCollection.m; sourceTree = "<group>"; };
+		7BB3EF031674F81100BABF35 /* twitter_bootstrap_admin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = twitter_bootstrap_admin; path = ../twitter_bootstrap_admin; sourceTree = "<group>"; };
 		C99CEC85147959C200F648A5 /* RoutingHTTPServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutingHTTPServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99CEC89147959C200F648A5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C99CEC8C147959C200F648A5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -143,6 +147,7 @@
 		C99CEC7A147959C200F648A5 = {
 			isa = PBXGroup;
 			children = (
+				7BB3EF031674F81100BABF35 /* twitter_bootstrap_admin */,
 				C99CEC8F147959C200F648A5 /* RoutingHTTPServer */,
 				C99CECAC147959C300F648A5 /* Tests */,
 				C99CECC214795B0C00F648A5 /* Routing HTTP */,
@@ -188,6 +193,8 @@
 				C99CEC9B147959C200F648A5 /* AppDelegate.h */,
 				C99CEC9C147959C200F648A5 /* AppDelegate.m */,
 				C99CEC9E147959C300F648A5 /* MainMenu.xib */,
+				7B8A347216E6ED070088D209 /* AssetCollection.h */,
+				7B8A347316E6ED070088D209 /* AssetCollection.m */,
 				C99CEC90147959C200F648A5 /* Supporting Files */,
 			);
 			path = RoutingHTTPServer;
@@ -328,7 +335,7 @@
 		C99CEC7C147959C200F648A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = C99CEC7F147959C200F648A5 /* Build configuration list for PBXProject "RoutingHTTPServer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -356,6 +363,7 @@
 				C99CEC94147959C200F648A5 /* InfoPlist.strings in Resources */,
 				C99CEC9A147959C200F648A5 /* Credits.rtf in Resources */,
 				C99CECA0147959C300F648A5 /* MainMenu.xib in Resources */,
+				7BB3EF041674F81100BABF35 /* twitter_bootstrap_admin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +420,7 @@
 				C99CECFD14795B6C00F648A5 /* HTTPFileResponse.m in Sources */,
 				C99CECFE14795B6C00F648A5 /* HTTPRedirectResponse.m in Sources */,
 				C99CED0114795B7800F648A5 /* GCDAsyncSocket.m in Sources */,
-				C99CED0414795B8000F648A5 /* DDLog.m in Sources */,
+				7B8A347416E6ED070088D209 /* AssetCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +483,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -489,6 +501,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -501,6 +514,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -509,6 +526,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
@@ -519,10 +537,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoutingHTTPServer/RoutingHTTPServer-Prefix.pch";
 				INFOPLIST_FILE = "RoutingHTTPServer/RoutingHTTPServer-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					AtoZ,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -531,10 +555,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoutingHTTPServer/RoutingHTTPServer-Prefix.pch";
 				INFOPLIST_FILE = "RoutingHTTPServer/RoutingHTTPServer-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					AtoZ,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -544,6 +574,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RoutingHTTPServer.app/Contents/MacOS/RoutingHTTPServer";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoutingHTTPServer/RoutingHTTPServer-Prefix.pch";
@@ -559,6 +590,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RoutingHTTPServer.app/Contents/MacOS/RoutingHTTPServer";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoutingHTTPServer/RoutingHTTPServer-Prefix.pch";
