@@ -1,35 +1,37 @@
 
-#import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
-#import "AssetCollection.h"
-
+#import "HTTPConnection.h"
 
 #define REQ RouteRequest
 #define RES RouteResponse
 
-@class RoutingHTTPServer;
+#define UPLOAD_FILE_PROGRESS @"uploadfileprogress"
+//#define HTTPLogVerbose(arg,...) NSLog(arg,...)
 
+@class RoutingHTTPServer;
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSTextFieldDelegate, NSTableViewDataSource, NSTableViewDelegate>
 
-@property (STRNG) RoutingHTTPServer *http;
+@property (NATOM, STRNG) RoutingHTTPServer *http;
 @property (WK)  IBOutlet    WebView *webView;
 @property (WK) 	IBOutlet 	    NSW *window;
 @property (WK) 	IBOutlet     NSTXTF *urlField;
+@property (ASS) 	IBOutlet     NSTextView *stdOutView;
 @property (WK) 	IBOutlet	   NSTV *shortcuts;
 @property (WK) 	IBOutlet       NSAC *queriesController;
-@property (STRNG) 	NSMA 			*queries;
-@property (STRNG) 	NSS 			*baseURL;
+@property (NATOM, STRNG) 	NSMA 			*queries;
+@property (NATOM, STRNG) 	NSS 			*baseURL;
 
 
 @property (WK) IBOutlet	NSArrayController *assetController;
 @property (WK) IBOutlet	NSTableView *assetTable;
-@property (NATOM) AssetCollection *assets;
+@property (NATOM, STRNG) AssetCollection *assets;
 
 @property (WK) IBOutlet NSPathControl *jsPathBar;
 @property (WK) IBOutlet NSPathControl *cssPathBar;
 @property (WK) IBOutlet NSPathControl *htmlPathBar;
 
 - (void)setupRoutes;
+- (IBAction) selectAssets: (id) sender;
 
 @end
 
@@ -38,6 +40,6 @@
 @end
 
 @interface Shortcut : NSObject
-@property (STRNG, nonatomic) NSS* uri, *syntax;
+@property (STRNG, NATOM) NSS* uri, *syntax;
 - (id) initWithURI:(NSS*)uri syntax:(NSS*)syntax;
 @end
