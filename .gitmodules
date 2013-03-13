@@ -4,3 +4,4 @@
 [submodule "twitter_bootstrap_admin"]
 	path = twitter_bootstrap_admin
 	url = https://github.com/mralexgray/twitter_bootstrap_admin
+	ignore = dirty
