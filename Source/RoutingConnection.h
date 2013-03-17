@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "HTTPConnection.h"
 
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
 
 #define UPLOAD_FILE_PROGRESS @"uploadfileprogress"
 
@@ -13,8 +13,8 @@
 @interface RoutingConnection : HTTPConnection
 {
     MultipartFormDataParser*        parser;
-	NSFileHandle*					storeFile;
-	NSMutableArray*					uploadedFiles;
+		NSFileHandle*					storeFile;
+		NSMutableArray*					uploadedFiles;
 
 //	int             dataStartIndex;
 //	NSMutableArray  *multipartData;
