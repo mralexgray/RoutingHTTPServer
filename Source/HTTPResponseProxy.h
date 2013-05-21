@@ -5,8 +5,8 @@
 // without needing to create subclasses of every response.
 @interface HTTPResponseProxy : NSObject <HTTPResponse>
 
-@property (nonatomic) NSObject<HTTPResponse> *response;
-@property (nonatomic) NSInteger status;
+@property (nonatomic, assign) NSObject<HTTPResponse> *response;
+@property (nonatomic, assign) NSInteger status;
 
 - (NSInteger)customStatus;
 
