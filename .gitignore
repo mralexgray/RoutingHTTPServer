@@ -1,2 +1,6 @@
 Example/RoutingHTTPServer.xcodeproj/*
 !project.pbxproj
+
+.DS_Store
+
+Example/.DS_Store
