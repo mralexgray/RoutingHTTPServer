@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
-		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.SystemVersion">13A558</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1249.11</string>
+		<string key="IBDocument.HIToolboxVersion">691.00</string>
 		<dictionary class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="com.apple.InterfaceBuilder.CocoaPlugin">3084</string>
 			<string key="com.apple.WebKitIBPlugin">2053</string>
@@ -72,6 +72,7 @@
 							<string key="NSResourceName">NSMenuMixedState</string>
 						</object>
 						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="110575045"/>
 						<object class="NSMenu" key="NSSubmenu" id="110575045">
 							<string key="NSTitle">RoutingHTTPServer</string>
 							<array class="NSMutableArray" key="NSMenuItems">
@@ -123,6 +124,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="752062318"/>
 									<object class="NSMenu" key="NSSubmenu" id="752062318">
 										<string key="NSTitle">Services</string>
 										<array class="NSMutableArray" key="NSMenuItems"/>
@@ -200,6 +202,7 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="720053764"/>
 						<object class="NSMenu" key="NSSubmenu" id="720053764">
 							<string key="NSTitle">File</string>
 							<array class="NSMutableArray" key="NSMenuItems">
@@ -230,6 +233,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="1065607017"/>
 									<object class="NSMenu" key="NSSubmenu" id="1065607017">
 										<string key="NSTitle">Open Recent</string>
 										<array class="NSMutableArray" key="NSMenuItems">
@@ -325,6 +329,7 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="789758025"/>
 						<object class="NSMenu" key="NSSubmenu" id="789758025">
 							<string key="NSTitle">Edit</string>
 							<array class="NSMutableArray" key="NSMenuItems">
@@ -431,6 +436,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="963351320"/>
 									<object class="NSMenu" key="NSSubmenu" id="963351320">
 										<string key="NSTitle">Find</string>
 										<array class="NSMutableArray" key="NSMenuItems">
@@ -505,6 +511,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="769623530"/>
 									<object class="NSMenu" key="NSSubmenu" id="769623530">
 										<string key="NSTitle">Spelling and Grammar</string>
 										<array class="NSMutableArray" key="NSMenuItems">
@@ -574,6 +581,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="698887838"/>
 									<object class="NSMenu" key="NSSubmenu" id="698887838">
 										<string key="NSTitle">Substitutions</string>
 										<array class="NSMutableArray" key="NSMenuItems">
@@ -652,6 +660,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="579392910"/>
 									<object class="NSMenu" key="NSSubmenu" id="579392910">
 										<string key="NSTitle">Transformations</string>
 										<array class="NSMutableArray" key="NSMenuItems">
@@ -691,6 +700,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="785027613"/>
 									<object class="NSMenu" key="NSSubmenu" id="785027613">
 										<string key="NSTitle">Speech</string>
 										<array class="NSMutableArray" key="NSMenuItems">
@@ -726,6 +736,7 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="941447902"/>
 						<object class="NSMenu" key="NSSubmenu" id="941447902">
 							<string key="NSTitle">Format</string>
 							<array class="NSMutableArray" key="NSMenuItems">
@@ -737,6 +748,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="786677654"/>
 									<object class="NSMenu" key="NSSubmenu" id="786677654">
 										<string key="NSTitle">Font</string>
 										<array class="NSMutableArray" key="NSMenuItems">
@@ -826,6 +838,7 @@
 												<reference key="NSOnImage" ref="35465992"/>
 												<reference key="NSMixedImage" ref="502551668"/>
 												<string key="NSAction">submenuAction:</string>
+												<reference key="NSTarget" ref="175441468"/>
 												<object class="NSMenu" key="NSSubmenu" id="175441468">
 													<string key="NSTitle">Kern</string>
 													<array class="NSMutableArray" key="NSMenuItems">
@@ -872,6 +885,7 @@
 												<reference key="NSOnImage" ref="35465992"/>
 												<reference key="NSMixedImage" ref="502551668"/>
 												<string key="NSAction">submenuAction:</string>
+												<reference key="NSTarget" ref="1058217995"/>
 												<object class="NSMenu" key="NSSubmenu" id="1058217995">
 													<string key="NSTitle">Ligature</string>
 													<array class="NSMutableArray" key="NSMenuItems">
@@ -910,6 +924,7 @@
 												<reference key="NSOnImage" ref="35465992"/>
 												<reference key="NSMixedImage" ref="502551668"/>
 												<string key="NSAction">submenuAction:</string>
+												<reference key="NSTarget" ref="18263474"/>
 												<object class="NSMenu" key="NSSubmenu" id="18263474">
 													<string key="NSTitle">Baseline</string>
 													<array class="NSMutableArray" key="NSMenuItems">
@@ -1015,6 +1030,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 									<string key="NSAction">submenuAction:</string>
+									<reference key="NSTarget" ref="446991534"/>
 									<object class="NSMenu" key="NSSubmenu" id="446991534">
 										<string key="NSTitle">Text</string>
 										<array class="NSMutableArray" key="NSMenuItems">
@@ -1071,6 +1087,7 @@
 												<reference key="NSOnImage" ref="35465992"/>
 												<reference key="NSMixedImage" ref="502551668"/>
 												<string key="NSAction">submenuAction:</string>
+												<reference key="NSTarget" ref="956096989"/>
 												<object class="NSMenu" key="NSSubmenu" id="956096989">
 													<string key="NSTitle">Writing Direction</string>
 													<array class="NSMutableArray" key="NSMenuItems">
@@ -1204,6 +1221,7 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="466310130"/>
 						<object class="NSMenu" key="NSSubmenu" id="466310130">
 							<string key="NSTitle">View</string>
 							<array class="NSMutableArray" key="NSMenuItems">
@@ -1237,6 +1255,7 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="835318025"/>
 						<object class="NSMenu" key="NSSubmenu" id="835318025">
 							<string key="NSTitle">Window</string>
 							<array class="NSMutableArray" key="NSMenuItems">
@@ -1290,6 +1309,7 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
+						<reference key="NSTarget" ref="992780483"/>
 						<object class="NSMenu" key="NSSubmenu" id="992780483">
 							<string key="NSTitle">Help</string>
 							<array class="NSMutableArray" key="NSMenuItems">
@@ -1343,7 +1363,6 @@
 															<int key="NSvFlags">266</int>
 															<string key="NSFrame">{{0, 228}, {203, 29}}</string>
 															<reference key="NSSuperview" ref="1008504373"/>
-															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="250454260"/>
 															<string key="NSReuseIdentifierKey">_NS:9</string>
 															<bool key="NSEnabled">YES</bool>
@@ -1374,6 +1393,7 @@
 																</object>
 															</object>
 															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+															<int key="NSTextFieldAlignmentRectInsetsVersion">1</int>
 														</object>
 														<object class="WebView" id="250454260">
 															<reference key="NSNextResponder" ref="1008504373"/>
@@ -1397,7 +1417,6 @@
 															</set>
 															<string key="NSFrameSize">{203, 227}</string>
 															<reference key="NSSuperview" ref="1008504373"/>
-															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView"/>
 															<string key="NSReuseIdentifierKey">_NS:9</string>
 															<string key="FrameName"/>
@@ -1416,7 +1435,6 @@
 													</array>
 													<string key="NSFrameSize">{203, 257}</string>
 													<reference key="NSSuperview" ref="526797989"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="1049972220"/>
 													<string key="NSReuseIdentifierKey">_NS:9</string>
 													<string key="NSClassName">NSView</string>
@@ -1432,29 +1450,9 @@
 																<object class="NSTextView" id="771797618">
 																	<reference key="NSNextResponder" ref="142251620"/>
 																	<int key="NSvFlags">2322</int>
-																	<set class="NSMutableSet" key="NSDragTypes">
-																		<string>Apple HTML pasteboard type</string>
-																		<string>Apple PDF pasteboard type</string>
-																		<string>Apple PICT pasteboard type</string>
-																		<string>Apple PNG pasteboard type</string>
-																		<string>Apple URL pasteboard type</string>
-																		<string>CorePasteboardFlavorType 0x6D6F6F76</string>
-																		<string>NSColor pasteboard type</string>
-																		<string>NSFilenamesPboardType</string>
-																		<string>NSStringPboardType</string>
-																		<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
-																		<string>NeXT RTFD pasteboard type</string>
-																		<string>NeXT Rich Text Format v1.0 pasteboard type</string>
-																		<string>NeXT TIFF v4.0 pasteboard type</string>
-																		<string>NeXT font pasteboard type</string>
-																		<string>NeXT ruler pasteboard type</string>
-																		<string>WebURLsWithTitlesPboardType</string>
-																		<string>public.url</string>
-																	</set>
 																	<string key="NSFrameSize">{240, 22}</string>
 																	<reference key="NSSuperview" ref="142251620"/>
-																	<reference key="NSWindow"/>
-																	<reference key="NSNextKeyView" ref="466415292"/>
+																	<reference key="NSNextKeyView" ref="808411082"/>
 																	<string key="NSReuseIdentifierKey">_NS:13</string>
 																	<object class="NSTextContainer" key="NSTextContainer" id="797050995">
 																		<object class="NSLayoutManager" key="NSLayoutManager">
@@ -1526,7 +1524,6 @@
 															</array>
 															<string key="NSFrameSize">{203, 22}</string>
 															<reference key="NSSuperview" ref="262266465"/>
-															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="771797618"/>
 															<string key="NSReuseIdentifierKey">_NS:11</string>
 															<reference key="NSDocView" ref="771797618"/>
@@ -1557,7 +1554,6 @@
 															<int key="NSvFlags">256</int>
 															<string key="NSFrame">{{187, 0}, {16, 22}}</string>
 															<reference key="NSSuperview" ref="262266465"/>
-															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="539239349"/>
 															<string key="NSReuseIdentifierKey">_NS:83</string>
 															<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -1570,7 +1566,6 @@
 															<int key="NSvFlags">-2147483392</int>
 															<string key="NSFrame">{{-100, -100}, {87, 18}}</string>
 															<reference key="NSSuperview" ref="262266465"/>
-															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="142251620"/>
 															<string key="NSReuseIdentifierKey">_NS:33</string>
 															<bool key="NSEnabled">YES</bool>
@@ -1584,8 +1579,7 @@
 													</array>
 													<string key="NSFrame">{{0, 267}, {203, 22}}</string>
 													<reference key="NSSuperview" ref="526797989"/>
-													<reference key="NSWindow"/>
-													<reference key="NSNextKeyView" ref="808411082"/>
+													<reference key="NSNextKeyView" ref="142251620"/>
 													<string key="NSReuseIdentifierKey">_NS:9</string>
 													<int key="NSsFlags">133264</int>
 													<reference key="NSVScroller" ref="466415292"/>
@@ -1598,14 +1592,12 @@
 											</array>
 											<string key="NSFrameSize">{203, 289}</string>
 											<reference key="NSSuperview" ref="802252455"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="1008504373"/>
 											<int key="NSDividerStyle">3</int>
 										</object>
 									</array>
 									<string key="NSFrameSize">{203, 289}</string>
 									<reference key="NSSuperview" ref="726913368"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="526797989"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<string key="NSClassName">NSView</string>
@@ -1619,14 +1611,13 @@
 											<int key="NSvFlags">18</int>
 											<string key="NSFrame">{{4, 4}, {315, 281}}</string>
 											<reference key="NSSuperview" ref="539239349"/>
-											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="386737314"/>
+											<reference key="NSNextKeyView" ref="1012203025"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<array class="NSMutableArray" key="NSTabViewItems">
 												<object class="NSTabViewItem" id="711211656">
 													<string key="NSIdentifier">1</string>
 													<object class="NSView" key="NSView" id="1012203025">
-														<nil key="NSNextResponder"/>
+														<reference key="NSNextResponder" ref="1028189894"/>
 														<int key="NSvFlags">256</int>
 														<array class="NSMutableArray" key="NSSubviews">
 															<object class="NSScrollView" id="620689686">
@@ -1640,7 +1631,7 @@
 																			<object class="NSTableView" id="140609184">
 																				<reference key="NSNextResponder" ref="591791643"/>
 																				<int key="NSvFlags">256</int>
-																				<string key="NSFrameSize">{417, 114}</string>
+																				<string key="NSFrameSize">{295, 130}</string>
 																				<reference key="NSSuperview" ref="591791643"/>
 																				<reference key="NSNextKeyView" ref="185345018"/>
 																				<string key="NSReuseIdentifierKey">_NS:13</string>
@@ -1656,7 +1647,7 @@
 																				</object>
 																				<array class="NSMutableArray" key="NSTableColumns">
 																					<object class="NSTableColumn" id="276895522">
-																						<double key="NSWidth">414</double>
+																						<double key="NSWidth">292</double>
 																						<double key="NSMinWidth">40</double>
 																						<double key="NSMaxWidth">1000</double>
 																						<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -1732,7 +1723,7 @@
 																				<int key="NSTableViewGroupRowStyle">1</int>
 																			</object>
 																		</array>
-																		<string key="NSFrameSize">{417, 114}</string>
+																		<string key="NSFrameSize">{295, 130}</string>
 																		<reference key="NSSuperview" ref="620689686"/>
 																		<reference key="NSNextKeyView" ref="140609184"/>
 																		<string key="NSReuseIdentifierKey">_NS:11</string>
@@ -1766,7 +1757,7 @@
 																		<double key="NSPercent">0.99581589958159</double>
 																	</object>
 																</array>
-																<string key="NSFrame">{{0, 105}, {417, 114}}</string>
+																<string key="NSFrame">{{0, 105}, {295, 130}}</string>
 																<reference key="NSSuperview" ref="1012203025"/>
 																<reference key="NSNextKeyView" ref="591791643"/>
 																<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -1780,7 +1771,8 @@
 																<double key="NSMagnification">1</double>
 															</object>
 														</array>
-														<string key="NSFrame">{{10, 33}, {417, 219}}</string>
+														<string key="NSFrame">{{10, 33}, {295, 235}}</string>
+														<reference key="NSSuperview" ref="1028189894"/>
 														<reference key="NSNextKeyView" ref="620689686"/>
 														<string key="NSReuseIdentifierKey">_NS:11</string>
 													</object>
@@ -1796,7 +1788,7 @@
 												<object class="NSTabViewItem" id="699034852">
 													<string key="NSIdentifier">2</string>
 													<object class="NSView" key="NSView" id="386737314">
-														<reference key="NSNextResponder" ref="1028189894"/>
+														<nil key="NSNextResponder"/>
 														<int key="NSvFlags">256</int>
 														<array class="NSMutableArray" key="NSSubviews">
 															<object class="NSPathControl" id="329473070">
@@ -1808,7 +1800,6 @@
 																</set>
 																<string key="NSFrame">{{16, 213}, {253, 20}}</string>
 																<reference key="NSSuperview" ref="386737314"/>
-																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="442272444"/>
 																<string key="NSReuseIdentifierKey">_NS:9</string>
 																<bool key="NSEnabled">YES</bool>
@@ -1859,6 +1850,7 @@
 																	<reference key="NSDelegate" ref="329473070"/>
 																</object>
 																<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+																<bool key="NSControlAllowsExpansionToolTips">YES</bool>
 															</object>
 															<object class="NSPathControl" id="442272444">
 																<reference key="NSNextResponder" ref="386737314"/>
@@ -1869,7 +1861,6 @@
 																</set>
 																<string key="NSFrame">{{154, 213}, {253, 20}}</string>
 																<reference key="NSSuperview" ref="386737314"/>
-																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="433895562"/>
 																<string key="NSReuseIdentifierKey">_NS:9</string>
 																<bool key="NSEnabled">YES</bool>
@@ -1915,6 +1906,7 @@
 																	<reference key="NSDelegate" ref="442272444"/>
 																</object>
 																<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+																<bool key="NSControlAllowsExpansionToolTips">YES</bool>
 															</object>
 															<object class="NSPathControl" id="433895562">
 																<reference key="NSNextResponder" ref="386737314"/>
@@ -1925,7 +1917,6 @@
 																</set>
 																<string key="NSFrame">{{293, 213}, {253, 20}}</string>
 																<reference key="NSSuperview" ref="386737314"/>
-																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="928685953"/>
 																<string key="NSReuseIdentifierKey">_NS:9</string>
 																<bool key="NSEnabled">YES</bool>
@@ -1971,6 +1962,7 @@
 																	<reference key="NSDelegate" ref="433895562"/>
 																</object>
 																<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+																<bool key="NSControlAllowsExpansionToolTips">YES</bool>
 															</object>
 															<object class="NSCustomView" id="928685953">
 																<reference key="NSNextResponder" ref="386737314"/>
@@ -1981,8 +1973,6 @@
 																		<int key="NSvFlags">289</int>
 																		<string key="NSFrame">{{219, -7}, {82, 32}}</string>
 																		<reference key="NSSuperview" ref="928685953"/>
-																		<reference key="NSWindow"/>
-																		<reference key="NSNextKeyView"/>
 																		<string key="NSReuseIdentifierKey">_NS:9</string>
 																		<bool key="NSEnabled">YES</bool>
 																		<object class="NSButtonCell" key="NSCell" id="122910610">
@@ -2006,7 +1996,6 @@
 																		<int key="NSvFlags">-2147483353</int>
 																		<string key="NSFrame">{{122, 11}, {45, 17}}</string>
 																		<reference key="NSSuperview" ref="928685953"/>
-																		<reference key="NSWindow"/>
 																		<reference key="NSNextKeyView" ref="324828697"/>
 																		<string key="NSReuseIdentifierKey">_NS:9</string>
 																		<bool key="NSEnabled">YES</bool>
@@ -2035,7 +2024,6 @@
 																		<int key="NSvFlags">-2147483354</int>
 																		<string key="NSFrame">{{11, 11}, {44, 17}}</string>
 																		<reference key="NSSuperview" ref="928685953"/>
-																		<reference key="NSWindow"/>
 																		<reference key="NSNextKeyView" ref="994075453"/>
 																		<string key="NSReuseIdentifierKey">_NS:9</string>
 																		<bool key="NSEnabled">YES</bool>
@@ -2060,7 +2048,6 @@
 																		<int key="NSvFlags">-2147483353</int>
 																		<string key="NSFrame">{{62, 11}, {45, 17}}</string>
 																		<reference key="NSSuperview" ref="928685953"/>
-																		<reference key="NSWindow"/>
 																		<reference key="NSNextKeyView" ref="669517617"/>
 																		<string key="NSReuseIdentifierKey">_NS:9</string>
 																		<bool key="NSEnabled">YES</bool>
@@ -2085,7 +2072,6 @@
 																		<int key="NSvFlags">-2147483353</int>
 																		<string key="NSFrame">{{183, 11}, {45, 17}}</string>
 																		<reference key="NSSuperview" ref="928685953"/>
-																		<reference key="NSWindow"/>
 																		<reference key="NSNextKeyView" ref="424537531"/>
 																		<string key="NSReuseIdentifierKey">_NS:9</string>
 																		<bool key="NSEnabled">YES</bool>
@@ -2110,7 +2096,6 @@
 																		<int key="NSvFlags">-2147483357</int>
 																		<string key="NSFrame">{{175, 10}, {105, 17}}</string>
 																		<reference key="NSSuperview" ref="928685953"/>
-																		<reference key="NSWindow"/>
 																		<reference key="NSNextKeyView" ref="835665725"/>
 																		<string key="NSReuseIdentifierKey">_NS:9</string>
 																		<bool key="NSEnabled">YES</bool>
@@ -2144,8 +2129,7 @@
 																						<array class="NSMutableArray" key="NSSubviews"/>
 																						<string key="NSFrameSize">{415, 153}</string>
 																						<reference key="NSSuperview" ref="556850845"/>
-																						<reference key="NSWindow"/>
-																						<reference key="NSNextKeyView" ref="808687213"/>
+																						<reference key="NSNextKeyView" ref="597058516"/>
 																						<string key="NSReuseIdentifierKey">_NS:13</string>
 																						<bool key="NSEnabled">YES</bool>
 																						<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -2156,7 +2140,6 @@
 																							<array class="NSMutableArray" key="NSSubviews"/>
 																							<string key="NSFrameSize">{415, 17}</string>
 																							<reference key="NSSuperview" ref="95318907"/>
-																							<reference key="NSWindow"/>
 																							<reference key="NSNextKeyView" ref="556850845"/>
 																							<string key="NSReuseIdentifierKey">_NS:16</string>
 																							<reference key="NSTableView" ref="624446420"/>
@@ -2320,7 +2303,6 @@
 																				</array>
 																				<string key="NSFrame">{{0, 17}, {297, 153}}</string>
 																				<reference key="NSSuperview" ref="388862904"/>
-																				<reference key="NSWindow"/>
 																				<reference key="NSNextKeyView" ref="624446420"/>
 																				<string key="NSReuseIdentifierKey">_NS:11</string>
 																				<reference key="NSDocView" ref="624446420"/>
@@ -2335,7 +2317,6 @@
 																				<int key="NSvFlags">-2147483392</int>
 																				<string key="NSFrame">{{-100, -100}, {15, 102}}</string>
 																				<reference key="NSSuperview" ref="388862904"/>
-																				<reference key="NSWindow"/>
 																				<reference key="NSNextKeyView" ref="263058935"/>
 																				<string key="NSReuseIdentifierKey">_NS:58</string>
 																				<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -2349,7 +2330,6 @@
 																				<int key="NSvFlags">-2147483392</int>
 																				<string key="NSFrame">{{-100, -100}, {501, 16}}</string>
 																				<reference key="NSSuperview" ref="388862904"/>
-																				<reference key="NSWindow"/>
 																				<reference key="NSNextKeyView" ref="95318907"/>
 																				<string key="NSReuseIdentifierKey">_NS:60</string>
 																				<bool key="NSEnabled">YES</bool>
@@ -2367,7 +2347,6 @@
 																				</array>
 																				<string key="NSFrameSize">{297, 17}</string>
 																				<reference key="NSSuperview" ref="388862904"/>
-																				<reference key="NSWindow"/>
 																				<reference key="NSNextKeyView" ref="314920261"/>
 																				<string key="NSReuseIdentifierKey">_NS:15</string>
 																				<reference key="NSDocView" ref="314920261"/>
@@ -2377,8 +2356,7 @@
 																		</array>
 																		<string key="NSFrame">{{-1, 36}, {297, 170}}</string>
 																		<reference key="NSSuperview" ref="928685953"/>
-																		<reference key="NSWindow"/>
-																		<reference key="NSNextKeyView" ref="597058516"/>
+																		<reference key="NSNextKeyView" ref="556850845"/>
 																		<string key="NSReuseIdentifierKey">_NS:9</string>
 																		<int key="NSsFlags">154256</int>
 																		<reference key="NSVScroller" ref="597058516"/>
@@ -2393,15 +2371,12 @@
 																</array>
 																<string key="NSFrameSize">{295, 206}</string>
 																<reference key="NSSuperview" ref="386737314"/>
-																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="388862904"/>
 																<string key="NSReuseIdentifierKey">_NS:9</string>
 																<string key="NSClassName">NSView</string>
 															</object>
 														</array>
 														<string key="NSFrame">{{10, 33}, {295, 235}}</string>
-														<reference key="NSSuperview" ref="1028189894"/>
-														<reference key="NSWindow"/>
 														<reference key="NSNextKeyView" ref="329473070"/>
 														<string key="NSReuseIdentifierKey">_NS:28</string>
 													</object>
@@ -2410,19 +2385,18 @@
 													<reference key="NSTabView" ref="1028189894"/>
 												</object>
 											</array>
-											<reference key="NSSelectedTabViewItem" ref="699034852"/>
+											<reference key="NSSelectedTabViewItem" ref="711211656"/>
 											<reference key="NSFont" ref="1070930948"/>
 											<int key="NSTvFlags">0</int>
 											<bool key="NSAllowTruncatedLabels">YES</bool>
 											<bool key="NSDrawsBackground">YES</bool>
 											<array class="NSMutableArray" key="NSSubviews">
-												<reference ref="386737314"/>
+												<reference ref="1012203025"/>
 											</array>
 										</object>
 									</array>
 									<string key="NSFrame">{{213, 0}, {323, 289}}</string>
 									<reference key="NSSuperview" ref="726913368"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="1028189894"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<string key="NSClassName">NSView</string>
@@ -2430,7 +2404,6 @@
 							</array>
 							<string key="NSFrameSize">{536, 289}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="802252455"/>
 							<bool key="NSIsVertical">YES</bool>
 							<int key="NSDividerStyle">3</int>
@@ -2438,7 +2411,6 @@
 					</array>
 					<string key="NSFrameSize">{536, 289}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="726913368"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1360, 746}}</string>
@@ -5039,1082 +5011,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">729</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">AppDelegate</string>
-					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">selectAssets:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">selectAssets:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">selectAssets:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="assetController">NSArrayController</string>
-						<string key="assetTable">NSTableView</string>
-						<string key="cssPathBar">NSPathControl</string>
-						<string key="htmlPathBar">NSPathControl</string>
-						<string key="jsPathBar">NSPathControl</string>
-						<string key="queriesController">NSAC</string>
-						<string key="shortcuts">NSTV</string>
-						<string key="stdOutView">NSTextView</string>
-						<string key="urlField">NSTXTF</string>
-						<string key="webView">WebView</string>
-						<string key="window">NSW</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="assetController">
-							<string key="name">assetController</string>
-							<string key="candidateClassName">NSArrayController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="assetTable">
-							<string key="name">assetTable</string>
-							<string key="candidateClassName">NSTableView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="cssPathBar">
-							<string key="name">cssPathBar</string>
-							<string key="candidateClassName">NSPathControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="htmlPathBar">
-							<string key="name">htmlPathBar</string>
-							<string key="candidateClassName">NSPathControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="jsPathBar">
-							<string key="name">jsPathBar</string>
-							<string key="candidateClassName">NSPathControl</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="queriesController">
-							<string key="name">queriesController</string>
-							<string key="candidateClassName">NSAC</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="shortcuts">
-							<string key="name">shortcuts</string>
-							<string key="candidateClassName">NSTV</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="stdOutView">
-							<string key="name">stdOutView</string>
-							<string key="candidateClassName">NSTextView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="urlField">
-							<string key="name">urlField</string>
-							<string key="candidateClassName">NSTXTF</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="webView">
-							<string key="name">webView</string>
-							<string key="candidateClassName">WebView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="window">
-							<string key="name">window</string>
-							<string key="candidateClassName">NSW</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/AppDelegate.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKDrawableObject</string>
-					<string key="superclassName">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="copyDrawingStyle:">id</string>
-						<string key="lock:">id</string>
-						<string key="lockLocation:">id</string>
-						<string key="logDescription:">id</string>
-						<string key="pasteDrawingStyle:">id</string>
-						<string key="toggleClipToBBox:">id</string>
-						<string key="toggleShowBBox:">id</string>
-						<string key="toggleShowPartcodes:">id</string>
-						<string key="toggleShowTargets:">id</string>
-						<string key="unlock:">id</string>
-						<string key="unlockLocation:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="copyDrawingStyle:">
-							<string key="name">copyDrawingStyle:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="lock:">
-							<string key="name">lock:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="lockLocation:">
-							<string key="name">lockLocation:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="logDescription:">
-							<string key="name">logDescription:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="pasteDrawingStyle:">
-							<string key="name">pasteDrawingStyle:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleClipToBBox:">
-							<string key="name">toggleClipToBBox:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleShowBBox:">
-							<string key="name">toggleShowBBox:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleShowPartcodes:">
-							<string key="name">toggleShowPartcodes:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleShowTargets:">
-							<string key="name">toggleShowTargets:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unlock:">
-							<string key="name">unlock:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unlockLocation:">
-							<string key="name">unlockLocation:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKDrawableObject.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKDrawablePath</string>
-					<string key="superclassName">DKDrawableObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="addRandomNoise:">id</string>
-						<string key="breakApart:">id</string>
-						<string key="closePath:">id</string>
-						<string key="convertToOutline:">id</string>
-						<string key="convertToShape:">id</string>
-						<string key="curveFit:">id</string>
-						<string key="parallelCopy:">id</string>
-						<string key="reversePath:">id</string>
-						<string key="roughenPath:">id</string>
-						<string key="smoothPath:">id</string>
-						<string key="smoothPathMore:">id</string>
-						<string key="toggleHorizontalFlip:">id</string>
-						<string key="toggleVerticalFlip:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="addRandomNoise:">
-							<string key="name">addRandomNoise:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="breakApart:">
-							<string key="name">breakApart:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="closePath:">
-							<string key="name">closePath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToOutline:">
-							<string key="name">convertToOutline:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToShape:">
-							<string key="name">convertToShape:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="curveFit:">
-							<string key="name">curveFit:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="parallelCopy:">
-							<string key="name">parallelCopy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="reversePath:">
-							<string key="name">reversePath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="roughenPath:">
-							<string key="name">roughenPath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="smoothPath:">
-							<string key="name">smoothPath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="smoothPathMore:">
-							<string key="name">smoothPathMore:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleHorizontalFlip:">
-							<string key="name">toggleHorizontalFlip:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleVerticalFlip:">
-							<string key="name">toggleVerticalFlip:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKDrawablePath.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKDrawableShape</string>
-					<string key="superclassName">DKDrawableObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="convertToPath:">id</string>
-						<string key="pastePath:">id</string>
-						<string key="resetBoundingBox:">id</string>
-						<string key="rotate:">id</string>
-						<string key="setDistortMode:">id</string>
-						<string key="toggleHorizontalFlip:">id</string>
-						<string key="toggleVerticalFlip:">id</string>
-						<string key="unrotate:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="convertToPath:">
-							<string key="name">convertToPath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="pastePath:">
-							<string key="name">pastePath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="resetBoundingBox:">
-							<string key="name">resetBoundingBox:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="rotate:">
-							<string key="name">rotate:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="setDistortMode:">
-							<string key="name">setDistortMode:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleHorizontalFlip:">
-							<string key="name">toggleHorizontalFlip:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleVerticalFlip:">
-							<string key="name">toggleVerticalFlip:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unrotate:">
-							<string key="name">unrotate:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKDrawableShape.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKDrawingView</string>
-					<string key="superclassName">GCZoomView</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="toggleRuler:">id</string>
-						<string key="toggleShowPageBreaks:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="toggleRuler:">
-							<string key="name">toggleRuler:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleShowPageBreaks:">
-							<string key="name">toggleShowPageBreaks:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKDrawingView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKLayer</string>
-					<string key="superclassName">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="copy:">id</string>
-						<string key="hideLayer:">id</string>
-						<string key="lockLayer:">id</string>
-						<string key="logDescription:">id</string>
-						<string key="showLayer:">id</string>
-						<string key="toggleLayerLock:">id</string>
-						<string key="toggleLayerVisible:">id</string>
-						<string key="unlockLayer:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="copy:">
-							<string key="name">copy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="hideLayer:">
-							<string key="name">hideLayer:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="lockLayer:">
-							<string key="name">lockLayer:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="logDescription:">
-							<string key="name">logDescription:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showLayer:">
-							<string key="name">showLayer:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleLayerLock:">
-							<string key="name">toggleLayerLock:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleLayerVisible:">
-							<string key="name">toggleLayerVisible:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unlockLayer:">
-							<string key="name">unlockLayer:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKLayer.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKObjectDrawingLayer</string>
-					<string key="superclassName">DKObjectOwnerLayer</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="alignBottomEdges:">id</string>
-						<string key="alignEdgesToGrid:">id</string>
-						<string key="alignHorizontalCentres:">id</string>
-						<string key="alignLeftEdges:">id</string>
-						<string key="alignLocationToGrid:">id</string>
-						<string key="alignRightEdges:">id</string>
-						<string key="alignTopEdges:">id</string>
-						<string key="alignVerticalCentres:">id</string>
-						<string key="applyStyle:">id</string>
-						<string key="assignKeyObject:">id</string>
-						<string key="clusterObjects:">id</string>
-						<string key="combineSelectedObjects:">id</string>
-						<string key="copy:">id</string>
-						<string key="cut:">id</string>
-						<string key="delete:">id</string>
-						<string key="deleteBackward:">id</string>
-						<string key="diffSelectedObjects:">id</string>
-						<string key="distributeHorizontalCentres:">id</string>
-						<string key="distributeHorizontalSpace:">id</string>
-						<string key="distributeVerticalCentres:">id</string>
-						<string key="distributeVerticalSpace:">id</string>
-						<string key="divideSelectedObjects:">id</string>
-						<string key="duplicate:">id</string>
-						<string key="ghostObjects:">id</string>
-						<string key="groupObjects:">id</string>
-						<string key="hideObject:">id</string>
-						<string key="intersectionSelectedObjects:">id</string>
-						<string key="joinPaths:">id</string>
-						<string key="lockObject:">id</string>
-						<string key="moveDown:">id</string>
-						<string key="moveLeft:">id</string>
-						<string key="moveRight:">id</string>
-						<string key="moveUp:">id</string>
-						<string key="objectBringForward:">id</string>
-						<string key="objectBringToFront:">id</string>
-						<string key="objectSendBackward:">id</string>
-						<string key="objectSendToBack:">id</string>
-						<string key="paste:">id</string>
-						<string key="revealHiddenObjects:">id</string>
-						<string key="selectAll:">id</string>
-						<string key="selectMatchingStyle:">id</string>
-						<string key="selectNone:">id</string>
-						<string key="selectOthers:">id</string>
-						<string key="setBooleanOpsFittingPolicy:">id</string>
-						<string key="showObject:">id</string>
-						<string key="unghostObjects:">id</string>
-						<string key="unionSelectedObjects:">id</string>
-						<string key="unlockObject:">id</string>
-						<string key="xorSelectedObjects:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="alignBottomEdges:">
-							<string key="name">alignBottomEdges:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignEdgesToGrid:">
-							<string key="name">alignEdgesToGrid:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignHorizontalCentres:">
-							<string key="name">alignHorizontalCentres:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignLeftEdges:">
-							<string key="name">alignLeftEdges:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignLocationToGrid:">
-							<string key="name">alignLocationToGrid:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignRightEdges:">
-							<string key="name">alignRightEdges:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignTopEdges:">
-							<string key="name">alignTopEdges:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignVerticalCentres:">
-							<string key="name">alignVerticalCentres:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="applyStyle:">
-							<string key="name">applyStyle:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="assignKeyObject:">
-							<string key="name">assignKeyObject:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="clusterObjects:">
-							<string key="name">clusterObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="combineSelectedObjects:">
-							<string key="name">combineSelectedObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="copy:">
-							<string key="name">copy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="cut:">
-							<string key="name">cut:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="delete:">
-							<string key="name">delete:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="deleteBackward:">
-							<string key="name">deleteBackward:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="diffSelectedObjects:">
-							<string key="name">diffSelectedObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="distributeHorizontalCentres:">
-							<string key="name">distributeHorizontalCentres:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="distributeHorizontalSpace:">
-							<string key="name">distributeHorizontalSpace:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="distributeVerticalCentres:">
-							<string key="name">distributeVerticalCentres:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="distributeVerticalSpace:">
-							<string key="name">distributeVerticalSpace:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="divideSelectedObjects:">
-							<string key="name">divideSelectedObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="duplicate:">
-							<string key="name">duplicate:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="ghostObjects:">
-							<string key="name">ghostObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="groupObjects:">
-							<string key="name">groupObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="hideObject:">
-							<string key="name">hideObject:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="intersectionSelectedObjects:">
-							<string key="name">intersectionSelectedObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="joinPaths:">
-							<string key="name">joinPaths:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="lockObject:">
-							<string key="name">lockObject:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="moveDown:">
-							<string key="name">moveDown:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="moveLeft:">
-							<string key="name">moveLeft:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="moveRight:">
-							<string key="name">moveRight:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="moveUp:">
-							<string key="name">moveUp:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="objectBringForward:">
-							<string key="name">objectBringForward:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="objectBringToFront:">
-							<string key="name">objectBringToFront:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="objectSendBackward:">
-							<string key="name">objectSendBackward:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="objectSendToBack:">
-							<string key="name">objectSendToBack:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="paste:">
-							<string key="name">paste:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="revealHiddenObjects:">
-							<string key="name">revealHiddenObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="selectAll:">
-							<string key="name">selectAll:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="selectMatchingStyle:">
-							<string key="name">selectMatchingStyle:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="selectNone:">
-							<string key="name">selectNone:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="selectOthers:">
-							<string key="name">selectOthers:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="setBooleanOpsFittingPolicy:">
-							<string key="name">setBooleanOpsFittingPolicy:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="showObject:">
-							<string key="name">showObject:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unghostObjects:">
-							<string key="name">unghostObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unionSelectedObjects:">
-							<string key="name">unionSelectedObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unlockObject:">
-							<string key="name">unlockObject:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="xorSelectedObjects:">
-							<string key="name">xorSelectedObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKObjectDrawingLayer.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKObjectOwnerLayer</string>
-					<string key="superclassName">DKLayer</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="toggleShowStorageDebuggingPath:">id</string>
-						<string key="toggleSnapToObjects:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="toggleShowStorageDebuggingPath:">
-							<string key="name">toggleShowStorageDebuggingPath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggleSnapToObjects:">
-							<string key="name">toggleSnapToObjects:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKObjectOwnerLayer.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKTextPath</string>
-					<string key="superclassName">DKDrawablePath</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="alignCenter:">id</string>
-						<string key="alignJustified:">id</string>
-						<string key="alignLeft:">id</string>
-						<string key="alignRight:">id</string>
-						<string key="capitalize:">id</string>
-						<string key="changeAttributes:">id</string>
-						<string key="changeFont:">id</string>
-						<string key="changeFontSize:">id</string>
-						<string key="changeLayoutMode:">id</string>
-						<string key="convertToPath:">id</string>
-						<string key="convertToShape:">id</string>
-						<string key="convertToShapeGroup:">id</string>
-						<string key="convertToTextShape:">id</string>
-						<string key="editText:">id</string>
-						<string key="loosenKerning:">id</string>
-						<string key="lowerBaseline:">id</string>
-						<string key="paste:">id</string>
-						<string key="raiseBaseline:">id</string>
-						<string key="subscript:">id</string>
-						<string key="superscript:">id</string>
-						<string key="takeTextAlignmentFromSender:">id</string>
-						<string key="takeTextVerticalAlignmentFromSender:">id</string>
-						<string key="tightenKerning:">id</string>
-						<string key="turnOffKerning:">id</string>
-						<string key="underline:">id</string>
-						<string key="unscript:">id</string>
-						<string key="useStandardKerning:">id</string>
-						<string key="verticalAlign:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="alignCenter:">
-							<string key="name">alignCenter:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignJustified:">
-							<string key="name">alignJustified:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignLeft:">
-							<string key="name">alignLeft:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignRight:">
-							<string key="name">alignRight:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="capitalize:">
-							<string key="name">capitalize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeAttributes:">
-							<string key="name">changeAttributes:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeFont:">
-							<string key="name">changeFont:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeFontSize:">
-							<string key="name">changeFontSize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeLayoutMode:">
-							<string key="name">changeLayoutMode:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToPath:">
-							<string key="name">convertToPath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToShape:">
-							<string key="name">convertToShape:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToShapeGroup:">
-							<string key="name">convertToShapeGroup:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToTextShape:">
-							<string key="name">convertToTextShape:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="editText:">
-							<string key="name">editText:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="loosenKerning:">
-							<string key="name">loosenKerning:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="lowerBaseline:">
-							<string key="name">lowerBaseline:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="paste:">
-							<string key="name">paste:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="raiseBaseline:">
-							<string key="name">raiseBaseline:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="subscript:">
-							<string key="name">subscript:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="superscript:">
-							<string key="name">superscript:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeTextAlignmentFromSender:">
-							<string key="name">takeTextAlignmentFromSender:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeTextVerticalAlignmentFromSender:">
-							<string key="name">takeTextVerticalAlignmentFromSender:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="tightenKerning:">
-							<string key="name">tightenKerning:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="turnOffKerning:">
-							<string key="name">turnOffKerning:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="underline:">
-							<string key="name">underline:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unscript:">
-							<string key="name">unscript:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="useStandardKerning:">
-							<string key="name">useStandardKerning:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="verticalAlign:">
-							<string key="name">verticalAlign:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKTextPath.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">DKTextShape</string>
-					<string key="superclassName">DKDrawableShape</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="alignCenter:">id</string>
-						<string key="alignJustified:">id</string>
-						<string key="alignLeft:">id</string>
-						<string key="alignRight:">id</string>
-						<string key="capitalize:">id</string>
-						<string key="changeAttributes:">id</string>
-						<string key="changeFont:">id</string>
-						<string key="changeFontSize:">id</string>
-						<string key="changeLayoutMode:">id</string>
-						<string key="convertToShape:">id</string>
-						<string key="convertToShapeGroup:">id</string>
-						<string key="convertToTextPath:">id</string>
-						<string key="editText:">id</string>
-						<string key="fitToText:">id</string>
-						<string key="loosenKerning:">id</string>
-						<string key="lowerBaseline:">id</string>
-						<string key="paste:">id</string>
-						<string key="raiseBaseline:">id</string>
-						<string key="subscript:">id</string>
-						<string key="superscript:">id</string>
-						<string key="takeTextAlignmentFromSender:">id</string>
-						<string key="takeTextVerticalAlignmentFromSender:">id</string>
-						<string key="tightenKerning:">id</string>
-						<string key="turnOffKerning:">id</string>
-						<string key="underline:">id</string>
-						<string key="unscript:">id</string>
-						<string key="useStandardKerning:">id</string>
-						<string key="verticalAlign:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="alignCenter:">
-							<string key="name">alignCenter:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignJustified:">
-							<string key="name">alignJustified:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignLeft:">
-							<string key="name">alignLeft:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="alignRight:">
-							<string key="name">alignRight:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="capitalize:">
-							<string key="name">capitalize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeAttributes:">
-							<string key="name">changeAttributes:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeFont:">
-							<string key="name">changeFont:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeFontSize:">
-							<string key="name">changeFontSize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="changeLayoutMode:">
-							<string key="name">changeLayoutMode:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToShape:">
-							<string key="name">convertToShape:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToShapeGroup:">
-							<string key="name">convertToShapeGroup:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="convertToTextPath:">
-							<string key="name">convertToTextPath:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="editText:">
-							<string key="name">editText:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="fitToText:">
-							<string key="name">fitToText:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="loosenKerning:">
-							<string key="name">loosenKerning:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="lowerBaseline:">
-							<string key="name">lowerBaseline:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="paste:">
-							<string key="name">paste:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="raiseBaseline:">
-							<string key="name">raiseBaseline:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="subscript:">
-							<string key="name">subscript:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="superscript:">
-							<string key="name">superscript:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeTextAlignmentFromSender:">
-							<string key="name">takeTextAlignmentFromSender:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeTextVerticalAlignmentFromSender:">
-							<string key="name">takeTextVerticalAlignmentFromSender:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="tightenKerning:">
-							<string key="name">tightenKerning:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="turnOffKerning:">
-							<string key="name">turnOffKerning:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="underline:">
-							<string key="name">underline:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="unscript:">
-							<string key="name">unscript:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="useStandardKerning:">
-							<string key="name">useStandardKerning:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="verticalAlign:">
-							<string key="name">verticalAlign:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DKTextShape.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">GCZoomView</string>
-					<string key="superclassName">NSView</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="zoomFitInWindow:">id</string>
-						<string key="zoomIn:">id</string>
-						<string key="zoomMax:">id</string>
-						<string key="zoomMin:">id</string>
-						<string key="zoomOut:">id</string>
-						<string key="zoomToActualSize:">id</string>
-						<string key="zoomToPercentageWithTag:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="zoomFitInWindow:">
-							<string key="name">zoomFitInWindow:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="zoomIn:">
-							<string key="name">zoomIn:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="zoomMax:">
-							<string key="name">zoomMax:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="zoomMin:">
-							<string key="name">zoomMin:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="zoomOut:">
-							<string key="name">zoomOut:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="zoomToActualSize:">
-							<string key="name">zoomToActualSize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="zoomToPercentageWithTag:">
-							<string key="name">zoomToPercentageWithTag:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/GCZoomView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="increment:">id</string>
-						<string key="performActionFromLabel:">id</string>
-						<string key="performActionFromSegmentLabel:">id</string>
-						<string key="setFromSegmentLabel:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="increment:">
-							<string key="name">increment:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="performActionFromLabel:">
-							<string key="name">performActionFromLabel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="performActionFromSegmentLabel:">
-							<string key="name">performActionFromSegmentLabel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="setFromSegmentLabel:">
-							<string key="name">setFromSegmentLabel:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSObject.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSTableView</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">scrollToStickyRow:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">scrollToStickyRow:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">scrollToStickyRow:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSTableView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSTextView</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="decrementFontSize:">id</string>
-						<string key="increaseFontSize:">id</string>
-						<string key="incrementFontSize:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="decrementFontSize:">
-							<string key="name">decrementFontSize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="increaseFontSize:">
-							<string key="name">increaseFontSize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="incrementFontSize:">
-							<string key="name">incrementFontSize:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSTextView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">RBLPopover</string>
-					<string key="superclassName">NSResponder</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">performClose:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">performClose:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">performClose:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/RBLPopover.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
