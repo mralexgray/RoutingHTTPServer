@@ -101,13 +101,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7B37782C16F1C0350083CBB5 /* AtoZ.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = AtoZ.framework; path = ../../../../../../../Library/Frameworks/AtoZ.framework; sourceTree = "<group>"; };
-		7B4B9CE216EA60B5002CCC63 /* MultipartFormDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartFormDataParser.h; sourceTree = "<group>"; };
-		7B4B9CE316EA60B5002CCC63 /* MultipartFormDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartFormDataParser.m; sourceTree = "<group>"; };
-		7B4B9CE416EA60B5002CCC63 /* MultipartMessageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeader.h; sourceTree = "<group>"; };
-		7B4B9CE516EA60B6002CCC63 /* MultipartMessageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeader.m; sourceTree = "<group>"; };
-		7B4B9CE616EA60B6002CCC63 /* MultipartMessageHeaderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeaderField.h; sourceTree = "<group>"; };
-		7B4B9CE716EA60B7002CCC63 /* MultipartMessageHeaderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeaderField.m; sourceTree = "<group>"; };
+		7B37782C16F1C0350083CBB5 /* AtoZ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AtoZ.framework; path = ../../../../../../../Library/Frameworks/AtoZ.framework; sourceTree = "<group>"; };
+		7B4B9CE216EA60B5002CCC63 /* MultipartFormDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipartFormDataParser.h; path = ../../CocoaHTTPServer/Core/Mime/MultipartFormDataParser.h; sourceTree = "<group>"; };
+		7B4B9CE316EA60B5002CCC63 /* MultipartFormDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipartFormDataParser.m; path = ../../CocoaHTTPServer/Core/Mime/MultipartFormDataParser.m; sourceTree = "<group>"; };
+		7B4B9CE416EA60B5002CCC63 /* MultipartMessageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipartMessageHeader.h; path = ../../CocoaHTTPServer/Core/Mime/MultipartMessageHeader.h; sourceTree = "<group>"; };
+		7B4B9CE516EA60B6002CCC63 /* MultipartMessageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipartMessageHeader.m; path = ../../CocoaHTTPServer/Core/Mime/MultipartMessageHeader.m; sourceTree = "<group>"; };
+		7B4B9CE616EA60B6002CCC63 /* MultipartMessageHeaderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipartMessageHeaderField.h; path = ../../CocoaHTTPServer/Core/Mime/MultipartMessageHeaderField.h; sourceTree = "<group>"; };
+		7B4B9CE716EA60B7002CCC63 /* MultipartMessageHeaderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipartMessageHeaderField.m; path = ../../CocoaHTTPServer/Core/Mime/MultipartMessageHeaderField.m; sourceTree = "<group>"; };
 		7B4B9CEC16EA642A002CCC63 /* indexUp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = indexUp.html; sourceTree = "<group>"; };
 		7B4B9CED16EA642A002CCC63 /* upload.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = upload.html; sourceTree = "<group>"; };
 		7B4B9D1E16EA6673002CCC63 /* FlashWavRecorder */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FlashWavRecorder; sourceTree = "<group>"; };

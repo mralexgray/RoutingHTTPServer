@@ -5,73 +5,47 @@
 #import "HTTPAsyncFileResponse.h"
 #import "HTTPResponseProxy.h"
 
-@implementation RouteResponse {
-	NSMutableDictionary *headers;
-	HTTPResponseProxy *proxy;
+#ifndef HTTPResDel
+#define HTTPResDel NSObject<HTTPResponse>
+#endif
+
+JREnumDefine(ResponseType);
+
+
+@implementation RouteResponse {	NSMutableDictionary *headers;	HTTPResponseProxy *proxy; }
+@synthesize connection, headers;
+
+- (id)initWithConnection:(HTTPConnection*)theConnection {	if (self != super.init) return nil;
+	connection 	= theConnection; headers= NSMutableDictionary.new;	proxy = HTTPResponseProxy.new; return self;
 }
+- (HTTPResDel*)        response									{	return proxy.response; 																				}
+- (void)		        setResponse:(HTTPResDel*)resp			{ 			 proxy.response = resp;		   															}
+- (HTTPResDel*) proxiedResponse 									{ return  proxy.response || proxy.customStatus != 0 || headers.count ? proxy : nil; }
+- (NSInteger) statusCode	 										{ return  proxy.status; 																				}
+- (void)   setStatusCode:(NSInteger)status					{          proxy.status = status; 																	}
+- (void) setHeader:(NSString*)fld value:(NSString*)val 	{ headers[fld] = val; 																					}
 
-@synthesize connection;
-@synthesize headers;
+- (void) setResponse:(id)data type:(ResponseType)type {
 
-- (id)initWithConnection:(HTTPConnection *)theConnection {
-	if (self = [super init]) {
-		connection = theConnection;
-		headers = [[NSMutableDictionary alloc] init];
-		proxy = [[HTTPResponseProxy alloc] init];
-	}
-	return self;
+	self.response 	= type == ResponseTypeString
+					&& [data ISKINDA:NSString.class]	  	? [HTTPDataResponse.alloc initWithData:[data dataUsingEncoding:NSUTF8StringEncoding]]
+						: type == ResponseTypeFile 		? [HTTPAsyncFileResponse.alloc initWithFilePath:data forConnection:connection]
+						: type == ResponseTypeFileAsync 	? [HTTPFileResponse.alloc initWithFilePath:data forConnection:connection]			: nil;
 }
+- (void)respondWithString:(NSString*)str 											{ [self setResponse:str type:ResponseTypeString]; 				}
+- (void)respondWithString:(NSString*)str encoding:(NSStringEncoding)enc { [self setResponse:str type:ResponseTypeString]; 				}
+- (void)respondWithData:	 (NSData*)dta 											{ [self setResponse:dta type:ResponseTypeData];					}
+- (void)respondWithFile:  (NSString*)pth 											{ [self setResponse:pth type:ResponseTypeFileAsync]; 			}
+- (void)respondWithFile:  (NSString*)pth async:(BOOL)a 						{ [self setResponse:pth type:a ? ResponseTypeFileAsync
+																																		 : ResponseTypeFile];         }
 
-- (NSObject <HTTPResponse>*)response {
-	return proxy.response;
-}
+//	[self respondWithString:string encoding:NSUTF8StringEncoding]; }
 
-- (void)setResponse:(NSObject <HTTPResponse>*)response {
-	proxy.response = response;
-}
-
-- (NSObject <HTTPResponse>*)proxiedResponse {
-	if (proxy.response != nil || proxy.customStatus != 0 || [headers count] > 0) {
-		return proxy;
-	}
-
-	return nil;
-}
-
-- (NSInteger)statusCode {
-	return proxy.status;
-}
-
-- (void)setStatusCode:(NSInteger)status {
-	proxy.status = status;
-}
-
-- (void)setHeader:(NSString *)field value:(NSString *)value {
-	[headers setObject:value forKey:field];
-}
-
-- (void)respondWithString:(NSString *)string {
-	[self respondWithString:string encoding:NSUTF8StringEncoding];
-}
-
-- (void)respondWithString:(NSString *)string encoding:(NSStringEncoding)encoding {
-	[self respondWithData:[string dataUsingEncoding:encoding]];
-}
-
-- (void)respondWithData:(NSData *)data {
-	self.response = [[HTTPDataResponse alloc] initWithData:data];
-}
-
-- (void)respondWithFile:(NSString *)path {
-	[self respondWithFile:path async:NO];
-}
-
-- (void)respondWithFile:(NSString *)path async:(BOOL)async {
-	if (async) {
-		self.response = [[HTTPAsyncFileResponse alloc] initWithFilePath:path forConnection:connection];
-	} else {
-		self.response = [[HTTPFileResponse alloc] initWithFilePath:path forConnection:connection];
-	}
-}
+//	if (async) {
+//		self.response = [[HTTPAsyncFileResponse alloc] initWithFilePath:path forConnection:connection];
+//	} else {
+//		self.response = [[HTTPFileResponse alloc] initWithFilePath:path forConnection:connection];
+//	}
+//}
 
 @end

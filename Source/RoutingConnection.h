@@ -1,6 +1,10 @@
+
 #import <Foundation/Foundation.h>
 #import "HTTPConnection.h"
-@class RoutingHTTPServer;
 
+
+@class RoutingHTTPServer;
 @interface RoutingConnection : HTTPConnection
+
+@property (readonly) WebSocket *ws;
 @end

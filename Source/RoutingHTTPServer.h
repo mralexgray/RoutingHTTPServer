@@ -7,7 +7,8 @@ typedef void (^RequestHandler)(RouteRequest *request, RouteResponse *response);
 
 @interface RoutingHTTPServer : HTTPServer
 
-@property (nonatomic, readonly) NSDictionary *defaultHeaders;
+@property (readonly) NSDictionary *defaultHeaders;
+@property (readonly) NSURL *address;
 
 // Specifies headers that will be set on every response.
 // These headers can be overridden by RouteResponses.

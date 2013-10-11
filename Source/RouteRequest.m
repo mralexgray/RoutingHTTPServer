@@ -20,7 +20,7 @@
 }
 
 - (NSString *)header:(NSString *)field {
-	return [message headerField:field];
+	return [message valueForHeaderField:field];
 }
 
 - (id)param:(NSString *)name {
@@ -31,8 +31,8 @@
 	return [message method];
 }
 
-- (NSURL *)url {
-	return [message url];
+- (NSURL *)URL {
+	return [message URL];
 }
 
 - (NSData *)body {

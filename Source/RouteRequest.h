@@ -10,7 +10,7 @@
 - (NSString *)header:(NSString *)field;
 - (id)param:(NSString *)name;
 - (NSString *)method;
-- (NSURL *)url;
+- (NSURL *)URL;
 - (NSData *)body;
 
 @end
