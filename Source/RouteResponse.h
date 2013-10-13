@@ -1,27 +1,29 @@
 #import <Foundation/Foundation.h>
 #import "HTTPResponse.h"
-
+#define HTTPCONN 	HTTPConnection
+#define HTTPRES 	HTTPResponse
 #import "JREnum.h"
 
 JREnumDeclare(ResponseType, ResponseTypeData, ResponseTypeString, ResponseTypeFile, ResponseTypeFileAsync, ResponseTypeDynamic, ResponseTypeSocket);
 
-@class HTTPConnection;
-@class HTTPResponseProxy;
+
+@class HTTPConnection, HTTPResponseProxy;
 
 @interface RouteResponse : NSObject
 
-@property (nonatomic,assign, readonly) HTTPConnection * connection;
-@property (nonatomic,readonly)           NSDictionary * headers;
-@property (nonatomic,strong) 	 NSObject<HTTPResponse> * response;
-@property (nonatomic,readonly) NSObject<HTTPResponse> * proxiedResponse;
-@property (nonatomic) 							  NSInteger   statusCode;
+@property (weak,readonly) 	 HTTPCONN  * connection;
+@property (readonly)         		NSD  * headers;
+@property (nonatomic) 	 NSO<HTTPRES> * response;
+@property (readonly) 	 NSO<HTTPRES> * proxiedResponse;
+@property (nonatomic) 				NSI    statusCode;
 
 - (id)initWithConnection:(HTTPConnection *)theConnection;
-- (void) setHeader:(NSString *)field value:(NSString *)value;
-- (void) respondWithString:(NSString *)string;
-- (void) respondWithString:(NSString *)string encoding:(NSStringEncoding)encoding;
-- (void) respondWithData:(NSData *)data;
-- (void) respondWithFile:(NSString *)path;
-- (void) respondWithFile:(NSString *)path async:(BOOL)async;
+
+- (void) setHeader:			   (NSS*)fld 	 value:(NSS*)val;
+- (void) respondWithString:	(NSS*)str;
+- (void) respondWithString:   (NSS*)str encoding:(NSStringEncoding)enc;
+- (void) respondWithData:	(NSData*)dta;
+- (void) respondWithFile:	   (NSS*)pth;
+- (void) respondWithFile: 	   (NSS*)pth   async:(BOOL)async;
 
 @end

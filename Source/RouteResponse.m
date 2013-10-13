@@ -11,26 +11,24 @@
 
 JREnumDefine(ResponseType);
 
+@implementation RouteResponse 									{	HTTPResponseProxy *proxy; }
 
-@implementation RouteResponse {	NSMutableDictionary *headers;	HTTPResponseProxy *proxy; }
-@synthesize connection, headers;
-
-- (id)initWithConnection:(HTTPConnection*)theConnection {	if (self != super.init) return nil;
-	connection 	= theConnection; headers= NSMutableDictionary.new;	proxy = HTTPResponseProxy.new; return self;
+- (id)initWithConnection:(HTTPCONN*)theConnection	 		{	if (self != super.init) return nil;
+	_connection 	= theConnection; _headers= NSMD.new;	proxy = HTTPResponseProxy.new; return self;
 }
 - (HTTPResDel*)        response									{	return proxy.response; 																				}
 - (void)		        setResponse:(HTTPResDel*)resp			{ 			 proxy.response = resp;		   															}
-- (HTTPResDel*) proxiedResponse 									{ return  proxy.response || proxy.customStatus != 0 || headers.count ? proxy : nil; }
+- (HTTPResDel*) proxiedResponse 									{ return  proxy.response || !proxy.customStatus || _headers.count ? proxy : nil; 	}
 - (NSInteger) statusCode	 										{ return  proxy.status; 																				}
-- (void)   setStatusCode:(NSInteger)status					{          proxy.status = status; 																	}
-- (void) setHeader:(NSString*)fld value:(NSString*)val 	{ headers[fld] = val; 																					}
+- (void)   setStatusCode:(NSInteger)status					{         proxy.status = status; 																	}
+- (void) setHeader:(NSString*)fld value:(NSString*)val 	{ _headers[fld] = val; 																					}
 
 - (void) setResponse:(id)data type:(ResponseType)type {
 
-	self.response 	= type == ResponseTypeString
-					&& [data ISKINDA:NSString.class]	  	? [HTTPDataResponse.alloc initWithData:[data dataUsingEncoding:NSUTF8StringEncoding]]
-						: type == ResponseTypeFile 		? [HTTPAsyncFileResponse.alloc initWithFilePath:data forConnection:connection]
-						: type == ResponseTypeFileAsync 	? [HTTPFileResponse.alloc initWithFilePath:data forConnection:connection]			: nil;
+	self.response 	= type == ResponseTypeString && [data ISKINDA:NSString.class]
+																	? [HTTPDataResponse.alloc initWithData:[data dataUsingEncoding:NSUTF8StringEncoding]]
+						: type == ResponseTypeFile 		? [HTTPAsyncFileResponse.alloc initWithFilePath:data forConnection:_connection]
+						: type == ResponseTypeFileAsync 	? [HTTPFileResponse.alloc initWithFilePath:data forConnection:_connection]			: nil;
 }
 - (void)respondWithString:(NSString*)str 											{ [self setResponse:str type:ResponseTypeString]; 				}
 - (void)respondWithString:(NSString*)str encoding:(NSStringEncoding)enc { [self setResponse:str type:ResponseTypeString]; 				}
@@ -39,12 +37,10 @@ JREnumDefine(ResponseType);
 - (void)respondWithFile:  (NSString*)pth async:(BOOL)a 						{ [self setResponse:pth type:a ? ResponseTypeFileAsync
 																																		 : ResponseTypeFile];         }
 
-//	[self respondWithString:string encoding:NSUTF8StringEncoding]; }
 
-//	if (async) {
-//		self.response = [[HTTPAsyncFileResponse alloc] initWithFilePath:path forConnection:connection];
-//	} else {
-//		self.response = [[HTTPFileResponse alloc] initWithFilePath:path forConnection:connection];
+//	[self respondWithString:string encoding:NSUTF8StringEncoding]; }
+//	if (async) {		self.response = [[HTTPAsyncFileResponse alloc] initWithFilePath:path forConnection:connection];
+//	} else {			self.response = [[HTTPFileResponse alloc] initWithFilePath:path forConnection:connection];
 //	}
 //}
 

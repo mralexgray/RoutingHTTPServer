@@ -1,82 +1,23 @@
+
 #import "HTTPResponseProxy.h"
 
-@implementation HTTPResponseProxy
+@implementation HTTPResponseProxy @synthesize status = _stts, response = _resp;
 
-@synthesize response;
-@synthesize status;
-
-- (NSInteger)status {
-	if (status != 0) {
-		return status;
-	} else if ([response respondsToSelector:@selector(status)]) {
-		return [response status];
-	}
-
-	return 200;
-}
-
-- (void)setStatus:(NSInteger)statusCode {
-	status = statusCode;
-}
-
-- (NSInteger)customStatus {
-	return status;
-}
+- (NSInteger) status 									{ return _stts ?: [_resp respondsToSelector:@selector(status)] ? _resp.status : 200; 	}
+- (NSInteger) customStatus	 							{ return _stts; 																								}
+-      (void) setStatus:		  (NSInteger)code	{ 			_stts = code;		 																				}
 
 // Implement the required HTTPResponse methods
-- (UInt64)contentLength {
-	if (response) {
-		return [response contentLength];
-	} else {
-		return 0;
-	}
-}
-
-- (UInt64)offset {
-	if (response) {
-		return [response offset];
-	} else {
-		return 0;
-	}
-}
-
-- (void)setOffset:(UInt64)offset {
-	if (response) {
-		[response setOffset:offset];
-	}
-}
-
-- (NSData *)readDataOfLength:(NSUInteger)length {
-	if (response) {
-		return [response readDataOfLength:length];
-	} else {
-		return nil;
-	}
-}
-
-- (BOOL)isDone {
-	if (response) {
-		return [response isDone];
-	} else {
-		return YES;
-	}
-}
+-    (UInt64) contentLength 							{ return _resp ?  _resp.contentLength : 0; 				}
+-    (UInt64) offset 									{ return _resp ?  _resp.offset 		  : 0;				}
+-      (void) setOffset:		 (UInt64)off		{ if    (_resp)   _resp.offset 		  = off;				}
+-   (NSData*) readDataOfLength:(NSUInteger)len 	{ return _resp ? [_resp readDataOfLength:len] : nil; 	}
+-      (BOOL) isDone 									{ return _resp ?  _resp.isDone 		  : YES; 			}
 
 // Forward all other invocations to the actual response object
-- (void)forwardInvocation:(NSInvocation *)invocation {
-	if ([response respondsToSelector:[invocation selector]]) {
-		[invocation invokeWithTarget:response];
-	} else {
-		[super forwardInvocation:invocation];
-	}
-}
-
-- (BOOL)respondsToSelector:(SEL)selector {
-	if ([super respondsToSelector:selector])
-		return YES;
-
-	return [response respondsToSelector:selector];
-}
+- (BOOL) respondsToSelector:(SEL)sel 				{ return [_resp respondsToSelector:sel] ?: [super respondsToSelector:sel];				}
+- (void) forwardInvocation:(NSInvocation*)inv 	{			[_resp respondsToSelector:inv.selector] ? [inv invokeWithTarget: _resp]
+																																 : [super forwardInvocation:inv]; 	}
 
 @end
 

@@ -15,14 +15,16 @@
 
 @implementation RoutingHTTPServerTests
 
-- (void)setUp {	[super setUp];	http = RoutingHTTPServer.alloc.init; [self setupRoutes];	AZLOGOUT; }
-- (void)tearDown {	[super tearDown]; AZLOGOUT; }
+- (void)setUp 		{	[super setUp];		http = RoutingHTTPServer.alloc.init; [self setupRoutes];	AZLOGOUT; }
+
+- (void)tearDown 	{	[super tearDown]; 																			AZLOGOUT; }
 
 - (void)testRoutes { AZLOGIN;
 
+	HTTPMessage *mess = HTTPMessage.alloc.initEmptyRequest;
 	RouteResponse *response = [http routeMethod:@"GET"   withPath:@"/null" 			  parameters:@{}
-											      request:HTTPMessage.alloc.initEmptyRequest  connection:nil];
-	XX(response);
+											      request:mess  connection:nil];
+	XX(mess); XX(response);
 	XCTAssertNil(response, @"Received response for path that does not exist");
 
 	[self verifyRouteWithMethod:@"GET" path:@"/hello"];
@@ -43,10 +45,12 @@
 
 - (void)testPost {	AZLOGIN; 	NSError *error = nil;
 
-	if (![http start:&error]) XCTFail(@"HTTP server failed to start");
-	XCTAssertNil(error, @"Uh oh, error during Post! %@", error);
+	if (![http start:&error]) 	XCTFail(@"HTTP server failed to start");
+										XCTAssertNil(error, @"Uh oh, error during Post! %@", error);
+
 	NSString *xmlString = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<greenLevel>supergreen</greenLevel>";
 	[self verifyMethod:@"POST" path:@"/xml" contentType:@"text/xml" inputString:xmlString responseString:@"supergreen"];
+
 	AZLOGOUT;
 }
 

@@ -1,47 +1,16 @@
 #import "RouteRequest.h"
 #import "HTTPMessage.h"
 
-@implementation RouteRequest {
-	HTTPMessage *message;
-}
+@implementation RouteRequest { HTTPMessage *message; }	@synthesize params;
 
-@synthesize params;
+- (id)initWithHTTPMessage:(HTTPMessage*)msg parameters:(NSD*)prmtrs { return self = super.init ? params = prmtrs, message = msg, self : nil; }
 
-- (id)initWithHTTPMessage:(HTTPMessage *)msg parameters:(NSDictionary *)parameters {
-	if (self = [super init]) {
-		params = parameters;
-		message = msg;
-	}
-	return self;
-}
-
-- (NSDictionary *)headers {
-	return [message allHeaderFields];
-}
-
-- (NSString *)header:(NSString *)field {
-	return [message valueForHeaderField:field];
-}
-
-- (id)param:(NSString *)name {
-	return [params objectForKey:name];
-}
-
-- (NSString *)method {
-	return [message method];
-}
-
-- (NSURL *)URL {
-	return [message URL];
-}
-
-- (NSData *)body {
-	return [message body];
-}
-
-- (NSString *)description {
-	NSData *data = [message messageData];
-	return [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-}
+-    (NSS*) description 				{ return [NSString stringWithData:message.messageData encoding:NSASCIIStringEncoding];	}
+-    (NSD*) headers 						{ return message.allHeaderFields; 					}
+-    (NSS*) header:	(NSS*)field 	{ return [message valueForHeaderField:field];	}
+-      (id) param:	(NSS*)name	 	{ return params[name];									}
+-    (NSS*) method 						{ return message.method;								}
+-  (NSURL*) URL 							{ return message.URL;									}
+- (NSData*) body 							{ return message.body;									}
 
 @end
