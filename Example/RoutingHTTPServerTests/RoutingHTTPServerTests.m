@@ -1,31 +1,43 @@
 
-#import "RoutingHTTPServer.h"
-#import "HTTPMessage.h"
-#import "HTTPDataResponse.h"
+#import <SenTestingKit/SenTestingKit.h>
+#import <AtoZ/AtoZ.h>
+//#import "RoutingHTTPServerTests.h"
+//#import "RoutingHTTPServer.h"
+//#import "HTTPMessage.h"
+//#import "HTTPDataResponse.h"
 
 
-@interface RoutingHTTPServerTests : XCTestCase {	RoutingHTTPServer *http; }	- (void) setupRoutes;
+@interface RoutingHTTPServerTests : SenTestCase {
+	RoutingHTTPServer *http;
+}
 
-- (void) verifyRouteWithMethod:			(NSString*)meth path:(NSString*)pth;
-- (void) verifyRouteNotFoundWithMethod:(NSString*)meth path:(NSString*)pth;
-- (void) handleSelectorRequest:(RouteRequest*)req withResponse:(RouteResponse *)res;
-- (void) verifyMethod:(NSString*)meth path:(NSString *)pth 		 contentType:(NSString*)contentType
-										 inputString:(NSString *)input responseString:(NSString*)expectedResStr;
+- (void)setupRoutes;
+- (void)verifyRouteWithMethod:(NSString *)method path:(NSString *)path;
+- (void)verifyRouteNotFoundWithMethod:(NSString *)method path:(NSString *)path;
+- (void)handleSelectorRequest:(RouteRequest *)request withResponse:(RouteResponse *)response;
+- (void)verifyMethod:(NSString *)method path:(NSString *)path contentType:(NSString *)contentType inputString:(NSString *)inputString responseString:(NSString *)expectedResponseString;
+
 @end
 
 @implementation RoutingHTTPServerTests
 
-- (void)setUp 		{	[super setUp];		http = RoutingHTTPServer.alloc.init; [self setupRoutes];	AZLOGOUT; }
+- (void)setUp {
+	[super setUp];
+	http = [[RoutingHTTPServer alloc] init];
+	[self setupRoutes];
+}
 
-- (void)tearDown 	{	[super tearDown]; 																			AZLOGOUT; }
+- (void)tearDown {
+	[super tearDown];
+}
 
-- (void)testRoutes { AZLOGIN;
+- (void)testRoutes {
+	RouteResponse *response;
+	NSDictionary *params = [NSDictionary dictionary];
+	HTTPMessage *request = [[HTTPMessage alloc] initEmptyRequest];
 
-	HTTPMessage *mess = HTTPMessage.alloc.initEmptyRequest;
-	RouteResponse *response = [http routeMethod:@"GET"   withPath:@"/null" 			  parameters:@{}
-											      request:mess  connection:nil];
-	XX(mess); XX(response);
-	XCTAssertNil(response, @"Received response for path that does not exist");
+	response = [http routeMethod:@"GET" withPath:@"/null" parameters:params request:request connection:nil];
+	STAssertNil(response, @"Received response for path that does not exist");
 
 	[self verifyRouteWithMethod:@"GET" path:@"/hello"];
 	[self verifyRouteWithMethod:@"GET" path:@"/hello/you"];
@@ -43,19 +55,23 @@
 	[self verifyRouteNotFoundWithMethod:@"GET" path:@"/form"];
 }
 
-- (void)testPost {	AZLOGIN; 	NSError *error = nil;
+- (void)testPost {
+	NSError *error = nil;
+	if (![http start:&error]) {
+		STFail(@"HTTP server failed to start");
+	}
 
-	if (![http start:&error]) 	XCTFail(@"HTTP server failed to start");
-										XCTAssertNil(error, @"Uh oh, error during Post! %@", error);
+	NSString *xmlString = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+		"<greenLevel>supergreen</greenLevel>";
 
-	NSString *xmlString = @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<greenLevel>supergreen</greenLevel>";
-	[self verifyMethod:@"POST" path:@"/xml" contentType:@"text/xml" inputString:xmlString responseString:@"supergreen"];
-
-	AZLOGOUT;
+	[self verifyMethod:@"POST"
+				  path:@"/xml"
+		   contentType:@"text/xml"
+		   inputString:xmlString
+		responseString:@"supergreen"];
 }
 
-- (void)setupRoutes { AZLOGIN;
-
+- (void)setupRoutes {
 	[http get:@"/hello" withBlock:^(RouteRequest *request, RouteResponse *response) {
 		[response respondWithString:@"/hello"];
 	}];
@@ -107,80 +123,62 @@
 			}
 		}
 	}];
-	AZLOGOUT;
 }
 
-- (void)handleSelectorRequest:(RouteRequest *)request withResponse:(RouteResponse *)response { AZLOGIN;
+- (void)handleSelectorRequest:(RouteRequest *)request withResponse:(RouteResponse *)response {
 	[response respondWithString:@"/selector"];
-	AZLOGOUT;
 }
 
-- (void)verifyRouteWithMethod:(NSString *)method path:(NSString *)path { AZLOGIN;
+- (void)verifyRouteWithMethod:(NSString *)method path:(NSString *)path {
+	RouteResponse *response;
+	NSDictionary *params = [NSDictionary dictionary];
+	HTTPMessage *request = [[HTTPMessage alloc] initEmptyRequest];
 
-	RouteResponse *response = [http routeMethod:method withPath:path parameters:@{} request:HTTPMessage.alloc.initEmptyRequest connection:nil];
-	XCTAssertNotNil(response.proxiedResponse, @"Proxied response is nil for %@ %@", method, path);
-	NSUInteger length 		= [response.proxiedResponse contentLength];
-	NSData *data 				= [response.proxiedResponse readDataOfLength:length];
-	NSS *responseString 		= [NSS stringWithData:data encoding:NSUTF8StringEncoding];
-	XCTAssertEqualObjects(responseString, path, @"Unexpected response for %@ %@", method, path);
-	AZLOGOUT;
+	response = [http routeMethod:method withPath:path parameters:params request:request connection:nil];
+	STAssertNotNil(response.proxiedResponse, @"Proxied response is nil for %@ %@", method, path);
+
+	NSUInteger length = [response.proxiedResponse contentLength];
+	NSData *data = [response.proxiedResponse readDataOfLength:length];
+	NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+	STAssertEqualObjects(responseString, path, @"Unexpected response for %@ %@", method, path);
 }
 
 - (void)verifyRouteNotFoundWithMethod:(NSString *)method path:(NSString *)path {
+	RouteResponse *response;
+	NSDictionary *params = [NSDictionary dictionary];
+	HTTPMessage *request = [[HTTPMessage alloc] initEmptyRequest];
 
-	AZLOGIN;
-	RouteResponse *response = [http routeMethod:method withPath:path parameters:@{} request:HTTPMessage.alloc.initEmptyRequest connection:nil];
-	XCTAssertNil(response, @"Response should have been nil for %@ %@", method, path);
-	AZLOGOUT;
+	response = [http routeMethod:method withPath:path parameters:params request:request connection:nil];
+	STAssertNil(response, @"Response should have been nil for %@ %@", method, path);
 }
 
-- (void)verifyMethod:(NSString*)meth path:(NSString*)pth contentType:(NSString*)cntntType inputString:(NSString*)inStr responseString:(NSString*)expctResStr {
+- (void)verifyMethod:(NSString *)method path:(NSString *)path contentType:(NSString *)contentType inputString:(NSString *)inputString responseString:(NSString *)expectedResponseString {
+	NSError *error = nil;
+	NSData *data = [inputString dataUsingEncoding:NSUTF8StringEncoding];
 
-	AZLOGIN; __block NSError *error = nil;
-	__block NSURLResponse *response; __block NSHTTPURLResponse *httpResponse; __block NSData *responseData,*data; __block NSString *responseString;
-	ASIHTTPRequest *requester 	= [ASIHTTPRequest.alloc initWithURL:$URL([[@"http://127.0.0.1:" withString:@(http.listeningPort).stringValue] withPath:pth])];
-	requester.requestMethod    = meth.uppercaseString;
-	requester.requestHeaders   = @{@"Content-Type":cntntType,@"Content-Length":@(data.length).stringValue}.mutableCopy;
-	if ((data = [inStr dataUsingEncoding:NSUTF8StringEncoding])) requester.postBody = data.mutableCopy;
-	requester.completionBlock 	= ^(ASIHTTPRequest *request) {
+	NSString *baseURLString = [NSString stringWithFormat:@"http://127.0.0.1:%d", [http listeningPort]];
 
-		data 		= request.responseData;
-		error  	= [request error];
-//	NSError *error = nil;
-//	responseData 	= LogAndReturn([NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error]);
+	NSString *urlString = [baseURLString stringByAppendingString:path];
+	NSURL *url = [NSURL URLWithString:urlString];
 
-//		NSS *responsePage      	= request.responseString.copy;
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+	[request setHTTPMethod:method];
+	[request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+	[request addValue:[NSString stringWithFormat:@"%ld", [data length]] forHTTPHeaderField:@"Content-Length"];
+	[request setHTTPBody:data];
 
-//		if (requestError) { block($DEFINE(@"undefined", @"no response from urban")); return; }
-//		AZHTMLParser *p 	= [AZHTMLParser.alloc initWithString:responsePage error:&requestError];
-//		HTMLNode *title 	= [p.head findChildWithAttribute:@"property" matchingName:@"og:title" allowPartial:YES];
-//		NSS *content	 	= [title getAttributeNamed:@"content"];
-//		HTMLNode *descN   = [p.head findChildWithAttribute:@"property" matchingName:@"og:description" allowPartial:YES];
-//		NSS *desc  			= [descN getAttributeNamed:@"content"];
-	};
+	NSURLResponse *response;
+	NSHTTPURLResponse *httpResponse;
+	NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+	STAssertNotNil(response, @"No response received for %@ %@", method, path);
+	STAssertNotNil(responseData, @"No response data received for %@ %@", method, path);
+	STAssertTrue([response isKindOfClass:[NSHTTPURLResponse class]], @"Response is not an NSHTTPURLResponse");
 
-//	NSURLResponse *response; NSHTTPURLResponse *httpResponse; NSMutableURLRequest *request; NSData *responseData,*data; NSString *responseString;
-//	data 		= [inStr dataUsingEncoding:NSUTF8StringEncoding];
-//	request 	= [NSMutableURLRequest.alloc initWithURL:$URL([[@"http://127.0.0.1:" withString:@(http.listeningPort).stringValue] withPath:pth])];
-//	[request setHTTPMethod:meth];
-//	[request addValue:cntntType 						forHTTPHeaderField:@"Content-Type"];
-//	[request addValue:@(data.length).stringValue forHTTPHeaderField:@"Content-Length"];
-//	[request setHTTPBody:data];
-//
+	httpResponse = (NSHTTPURLResponse *)response;
+	STAssertEquals([httpResponse statusCode], 200L, @"Unexpected status code for %@ %@", method, path);
 
-//	responseData 	= LogAndReturn([NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error]);
-	[requester startAsynchronous];
-
-	XCTAssertNotNil(requester, 		@"No response received for %@ %@", 		 meth, pth);
-	XCTAssertNotNil(responseData, @"No response data received for %@ %@", meth, pth);
-	XCTAssertTrue([requester ISKINDA:ASIHTTPRequest.class], @"Response is not an NSHTTPURLResponse"); // NSHTTPURLResponse.class
-
-//	XCTAssertEqual((httpResponse = (NSHTTPURLResponse*)response).statusCode, 200L, @"Unexpected status code for %@ %@", meth, pth);
-
-//	responseString = [NSString stringWithBytes:responseData.bytes length:(unsigned int)responseData.length encoding:NSUTF8StringEncoding];
-//	XX(expctResStr); XX(responseString);
-//	XCTAssertEqualObjects(responseString, expctResStr, @"Unexpected response for %@ %@", meth, pth);
-	AZLOGOUT;
+	NSString *responseString = [[NSString alloc] initWithBytes:[responseData bytes] length:[responseData length] encoding:NSUTF8StringEncoding];
+	STAssertEqualObjects(responseString, expectedResponseString, @"Unexpected response for %@ %@", method, path);
 }
 
 @end
