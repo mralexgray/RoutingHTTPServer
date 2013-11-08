@@ -28,7 +28,7 @@
 
 	[self setupRoutes];
 	[http setPort:8080];
-	[http setDocumentRoot:[@"~/Sites" stringByExpandingTildeInPath]];
+	[http setDocumentRoot:[NSBundle.mainBundle pathForResource:@"twitter_bootstrap_admin" ofType:nil]];// ][@"/mrgray.com"stringByResolvingSymlinksInPath]];
 
 	NSError *error;
 	if (![http start:&error]) {
